@@ -16,11 +16,11 @@ public class Game {
         String nome = key.nextLine();
         System.out.println("Qual será sua classe (Digite o número): 1.Anão,
                             2.Bárbaro, 3.Elfo, 4.Feiticeiro.");
-        int class = key.nextInt();
-        if(class == 1) personagem = new Anao(nome);
-        else if(class == 2) personagem = new Barbaro(nome);
-        else if(class == 3) personagem = new Elfo(nome);
-        else if(class == 4) personagem = new Feiticeiro(nome);
+        int classe = key.nextInt();
+        if(classe == 1) personagem = new Anao(nome);
+        else if(classe == 2) personagem = new Barbaro(nome);
+        else if(classe == 3) personagem = new Elfo(nome);
+        else if(classe == 4) personagem = new Feiticeiro(nome);
         while(!fim) {
             drawBoard();
             lerInput();

@@ -1,16 +1,13 @@
 
 import java.util.*;
 
-/**
- * 
- */
 public class Barbaro extends Barbaro {
-    
+
     private static int VIDA_INICIAL = 8;
     private static int INT_INICIAL = 2;
     private static int ATQ_INICIAL = 3;
     private static int DFS_INICIAL = 2;
-    
+
     public Barbaro(String nome) {
         super(nome);
         this.vida = VIDA_INICIAL;
