@@ -14,8 +14,7 @@ public class Game {
         Heroi personagem;
         System.out.println("Qual será o nome do seu personagem?");
         String nome = key.nextLine();
-        System.out.println("Qual será sua classe (Digite o número): 1.Anão,
-                            2.Bárbaro, 3.Elfo, 4.Feiticeiro.");
+        System.out.println("Qual será sua classe (Digite o número): 1.Anão, 2.Bárbaro, 3.Elfo, 4.Feiticeiro.");
         int classe = key.nextInt();
         if(classe == 1) personagem = new Anao(nome);
         else if(classe == 2) personagem = new Barbaro(nome);
@@ -39,10 +38,7 @@ public class Game {
         boolean passar = false;
 
         while (!passar && (acaoDisponivel || podeAndar) ) {
-            System.out.println("Digite um dos seguintes comandos: \"w-a-s-d\"
-                                caso queira andar, \"acao\" caso queira tomar
-                                alguma acao com seu personagem ou \"passar\" para
-                                passar para a proxima rodada.") ;
+            System.out.println("Digite um dos seguintes comandos: \"w-a-s-d\" caso queira andar, \"acao\" caso queira tomar alguma acao com seu personagem ou \"passar\" para passar para a proxima rodada.") ;
             String comando = keyboard.nextLine() ;
 
             switch(comando) {
@@ -61,8 +57,7 @@ public class Game {
                         break;
                     }
                     else {
-                        System.out.println("Escolha uma acao entre : atacar (a),
-                                            usar magia (s), tomar pocao (q), procurar (f)");
+                        System.out.println("Escolha uma acao entre : atacar (a), usar magia (s), tomar pocao (q), procurar (f)");
                         String acao = keyboard.nextLine();
                         acaoDisponivel = false;
 
