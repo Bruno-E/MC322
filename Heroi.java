@@ -1,9 +1,4 @@
 
-import java.util.*;
-
-/**
- *
- */
 public abstract class Heroi extends ElementoCombate{
     protected String nome;
     protected int movimento;
@@ -33,9 +28,44 @@ public abstract class Heroi extends ElementoCombate{
         // TODO implement here
     }
 
-    protected void movimentar() {
-        // TODO implement here
+    protected void mover(char direcao, Mapa mapa)() {
+        
+        // TODO Sala checarSala(Mapa mapa) retorna uma sala se o movimento leva para dentro dela
+        // TODO boolean checarPorta(Sala sala) retorna true se o movimento ocorre em uma porta
+        // TODO boolean saiDoMapa(char direcao)
+        // TODO public class ParedeNoCaminhoException extends Exception {}
+        // TODO public class ObstaculoNoCaminhoException extends Exception {}
+        // TODO public class Obstaculo {}
+
+        // TODO Printar mensagem das exceções no try-catch de mover() no Game.java
+        
+        if (!checarPorta(checarSala(mapa))) throw new ParedeNoCaminhoException("Parede no caminho.");
+                                            
+        else if (saiDoMapa(direcao)) throw new ArrayIndexOutOfBoundsException("Nao pode sair do mapa.");
+        
+        else if (checarObstaculo(mapa)) throw new ObstaculoNoCaminhoException("Obstaculo no caminho");
+        
+        else {
+            mapa.removerElemento(this);
+            switch(direcao) {
+                // TODO funcoes moverPara<direção>()
+                case "w":
+                    moverParaCima();
+                    break;
+                case "a":
+                    moverParaEsquerda();
+                    break;
+                case "s":
+                    moverParaBaixo();
+                    break;
+                case "d":
+                    moverParaDireita();
+                    break;
+            }
+        }
+
     }
+    
 
     @Override
     protected void defender(int ataque) {
@@ -74,10 +104,6 @@ public abstract class Heroi extends ElementoCombate{
         for(Item item : mochila)
             conteudo+=" "+item.getInformation()
         System.out.println(conteudo);
-    }
-
-    protected void mover(direcao: char)() {
-        // TODO implement here
     }
 
 }
