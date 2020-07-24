@@ -24,12 +24,8 @@ public abstract class Heroi extends ElementoCombate{
         return this.movimento;
     }
 
-    protected void jogarDadosAtaque() {
-        // TODO implement here
-    }
+    protected void mover(char direcao, Mapa mapa) {
 
-    protected void mover(char direcao, Mapa mapa)() {
-        
         // TODO Sala checarSala(Mapa mapa) retorna uma sala se o movimento leva para dentro dela
         // TODO boolean checarPorta(Sala sala) retorna true se o movimento ocorre em uma porta
         // TODO boolean saiDoMapa(char direcao)
@@ -38,13 +34,13 @@ public abstract class Heroi extends ElementoCombate{
         // TODO public class Obstaculo {}
 
         // TODO Printar mensagem das exceções no try-catch de mover() no Game.java
-        
+
         if (!checarPorta(checarSala(mapa))) throw new ParedeNoCaminhoException("Parede no caminho.");
-                                            
+
         else if (saiDoMapa(direcao)) throw new ArrayIndexOutOfBoundsException("Nao pode sair do mapa.");
-        
+
         else if (checarObstaculo(mapa)) throw new ObstaculoNoCaminhoException("Obstaculo no caminho");
-        
+
         else {
             mapa.removerElemento(this);
             switch(direcao) {
@@ -65,7 +61,7 @@ public abstract class Heroi extends ElementoCombate{
         }
 
     }
-    
+
 
     @Override
     protected void defender(int ataque) {
@@ -102,7 +98,7 @@ public abstract class Heroi extends ElementoCombate{
     protected void verMochila() {
         String conteudo="O conteudo da mochila é:";
         for(Item item : mochila)
-            conteudo+=" "+item.getInformation()
+            conteudo+=" "+item.getInformation();
         System.out.println(conteudo);
     }
 
