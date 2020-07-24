@@ -1,34 +1,28 @@
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
 
-/**
- * 
- */
-public class Sala extends Sala {
+public class Sala {
 
-    /**
-     * Default constructor
-     */
-    public Sala() {
+    private int largura;
+    private int altura;
+    private Ponto coordenada;
+    
+    public Sala(Ponto coordenada, int largura, int altura) {
+        this.coordenada = coordenada;
+        this.largura = largura;
+        this.altura = altura;
     }
 
-    /**
-     * 
-     */
-    private int altura;
-
-    /**
-     * 
-     */
-    private int largura;
-
-    /**
-     * 
-     */
-    private Ponto coordenada;
-
-
-
+    public int getLargura() {
+        return largura;
+    }
+    public int getAltura() {
+        return altura;
+    }
+    public Ponto getCoordenada() {
+        return coordenada;
+    }
 
 
 }
