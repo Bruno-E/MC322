@@ -1,11 +1,7 @@
 
-import java.util.*;
-
-/**
- *
- */
 public abstract class Heroi extends ElementoCombate{
     protected String nome;
+    protected Ponto posicao;
     protected int movimento;
     protected List<Item> mochila=new ArrayList<Item>();
     protected Arma ArmasAtuais;
@@ -16,6 +12,7 @@ public abstract class Heroi extends ElementoCombate{
     protected Heroi(String nome) {
         this.nome = nome;
         this.movimento = 0;
+        posicao = new Ponto(0, 0);
     }
 
     int getInteligencia() {
@@ -33,7 +30,7 @@ public abstract class Heroi extends ElementoCombate{
         // TODO implement here
     }
 
-    protected void movimentar() {
+    protected void mover(char direcao)() {
         // TODO implement here
     }
 
@@ -74,10 +71,6 @@ public abstract class Heroi extends ElementoCombate{
         for(Item item : mochila)
             conteudo+=" "+item.getInformation()
         System.out.println(conteudo);
-    }
-
-    protected void mover(direcao: char)() {
-        // TODO implement here
     }
 
 }
