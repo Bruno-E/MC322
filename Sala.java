@@ -1,3 +1,4 @@
+package mc322.heroquest.main;
 
 import java.util.List;
 import java.util.ArrayList;

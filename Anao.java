@@ -1,3 +1,4 @@
+package mc322.heroquest.main;
 
 public class Anao extends Heroi {
     private static int VIDA_INICIAL = 7;
