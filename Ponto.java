@@ -1,32 +1,26 @@
 
-import java.util.*;
+public class Ponto {
 
-/**
- * 
- */
-public class Ponto implements ElementoMovel {
-
-    /**
-     * Default constructor
-     */
-    public Ponto() {
-    }
-
-    /**
-     * 
-     */
     private int linha;
-
-    /**
-     * 
-     */
     private int coluna;
-
-    /**
-     * 
-     */
-    public void mover(direcao: char)() {
-        // TODO implement here
+    
+    public Ponto(int linha, int coluna) {
+        this.linha = linha;
+        this.coluna = coluna;
     }
 
+    public int getLinha() {
+        return linha;
+    }
+    public void setLinha(int linha) {
+        this.linha = linha;
+    }
+
+    public int getColuna() {
+        return coluna;
+    }
+    public void setColuna(int coluna) {
+        this.coluna = coluna;
+    }
+    
 }
